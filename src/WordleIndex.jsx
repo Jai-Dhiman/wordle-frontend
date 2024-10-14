@@ -1,7 +1,7 @@
-export function PhotosIndex() {
+export function WordleIndex() {
   return (
     <div>
-      <h1>All photos</h1>
+      <h1>Words</h1>
     </div>
   );
 }
