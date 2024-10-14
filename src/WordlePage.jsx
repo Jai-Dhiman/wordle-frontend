@@ -1,7 +1,9 @@
+import { WordleIndex } from "./WordleIndex";
+
 export function WordlePage() {
   return (
     <main>
-      <h1>Welcome to React!</h1>
+      <WordleIndex />
     </main>
   );
 }
