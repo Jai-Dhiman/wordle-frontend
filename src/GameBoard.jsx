@@ -6,7 +6,6 @@ const GameBoard = ({ guesses, currentGuess, wordLength }) => {
     if (status === "correct") cellClass += " correct";
     if (status === "present") cellClass += " present";
     if (status === "absent") cellClass += " absent";
-
     return <div className={cellClass}>{letter}</div>;
   };
 
