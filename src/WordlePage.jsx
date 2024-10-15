@@ -1,5 +1,5 @@
-import { WordleIndex } from "./WordleIndex";
 import { useState, useEffect } from "react";
+import { GameBoard } from "./GameBoard";
 import "./index.css";
 
 export function WordlePage() {
