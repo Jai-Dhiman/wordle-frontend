@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body {
   margin: 0;
@@ -63,3 +64,8 @@ body {
   --border: #444;
 
 }
+=======
+html {
+  scroll-behavior: smooth;
+}
+>>>>>>> cb0cf03d697a738470236ae63abdd5c30f2a77ae
