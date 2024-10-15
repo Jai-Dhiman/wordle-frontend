@@ -1,35 +1,41 @@
-import { WordleIndex } from "./WordleIndex";
-import { useState, useEffect } from 'react';
-import './index.css';
+import { useState, useEffect } from "react";
+import { GameBoard } from "./GameBoard";
+import "./index.css";
 
 export function WordlePage() {
+  const Game = () => {
+    const [guesses, setGuesses] = useState([]);
+    const [currentGuess, setCurrentGuess] = useState("");
+    const wordLength = 5;
+  };
+
   return (
     <main>
-      <WordleIndex />
+      <div className="game">
+        <GameBoard guesses={guesses} currentGuess={currentGuess} wordLength={wordLength} />
+      </div>
     </main>
   );
 }
 
 const Wordle = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark");
 
   // Set the initial theme on component mount
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
   };
 
   return (
     <div className="wordle-container">
       <h1 className="title">Wordle</h1>
-      <button onClick={toggleTheme}>
-        Switch to {theme === 'dark' ? 'Light' : 'Dark'} Mode
-      </button>
+      <button onClick={toggleTheme}>Switch to {theme === "dark" ? "Light" : "Dark"} Mode</button>
       <div className="grid">
         {/* Your game rows and cells */}
         <div className="row">
